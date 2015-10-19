@@ -7,7 +7,7 @@
     </div>
     <div class="pure-g">
         <div class="pure-u-1-3">
-            Начало: <input type="time" name="timeInput" onchange="{changeTime}">
+            <input type="time" name="timeInput" onchange="{changeTime}">
         </div>
         <div class="pure-u-1-3" >
             = {minutes}
