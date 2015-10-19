@@ -1,4 +1,4 @@
-.pure-button {
+/*.pure-button {
     border: 1px solid #999;
 }
 
@@ -13,8 +13,6 @@ html,body, app, .wrap {
     height: 20%;
 }
 .row {
-  /*  line-height: 30px;
-    font-size: 30px;*/
     height: 19%;
 }
 
@@ -22,9 +20,13 @@ html,body, app, .wrap {
     line-height: 60px;
     font-size: 60px;
     vertical-align: middle;
-    /*text-align: center;*/
 }
 .num.active {
     font-weight: bold;
     text-decoration: underline;
+}
+*/
+
+html{
+    font-size: 32px;
 }
