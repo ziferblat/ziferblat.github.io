@@ -7,7 +7,7 @@
     </div>
     <div class="pure-g">
         <div class="pure-u-1-3">
-            <input type="time" name="timeInput" onchange="{changeTime}">
+            <input type="time" name="timeInput" onchange="{changeTime}" max="{moment().format('HH:mm')}">
         </div>
         <div class="pure-u-1-3" >
             = {minutes}
