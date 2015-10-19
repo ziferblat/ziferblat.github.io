@@ -104,7 +104,7 @@
             } else if (self.delta) {
                 self.minutes = self.delta + '*3'
             } else {
-                self.minutes = 'время не задано'
+                self.minutes = '?'
             }
         }
 
