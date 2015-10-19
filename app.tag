@@ -3,13 +3,55 @@
         <div class=" pure-u-1-3">
             Cейчас: {moment().format('HH:mm')}
         </div>
+        <div class=" pure-u-1-3">
+            <div class="pure-button pure-button-primary button-add" onclick="{deleteAll}">Сбросить</div>
+        </div>
     </div>
 
     <row each={rows}/>
 
+
+    <div class="pure-g">
+        <div class=" pure-u-1-3">
+            <div class="pure-button button-add" onclick="{addRow}"> + </div>
+        </div>
+        <div class=" pure-u-1-3"></div>
+        <div class=" pure-u-1-3">
+            <b>{calcTotal()} рублей</b>
+        </div>
+    </div>
+
+
     <script type="text/javascript">
         var self = this
         self.rows = [{}]
+        self.total = 0
+
+        self.addRow = function () {
+            self.rows.push({})
+        }
+
+        self.on('update', function () {
+            self.calcTotal()
+        })
+
+        self.calcTotal = function () {
+            var total = 0
+            var rows = self.tags.row
+            if (rows) {
+                for (var i = 0; i < rows.length; i++) {
+                    total = total + rows[i].calcMoney()
+                }
+            }
+            return total
+        }
+
+        self.deleteAll = function () {
+            self.rows = []
+            self.update()
+            self.addRow()
+            self.update()
+        }
     </script>
 </app>
 
