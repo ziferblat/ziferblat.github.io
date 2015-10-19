@@ -82,11 +82,8 @@
         })
 
         self.on('update', function () {
-            console.log(self.delta)
             self.calcDelta()
             self.formatDelta()
-            // self.calcMoney()
-            // console.log(self.delta)
         })
 
         self.changeTime = function (e) {
